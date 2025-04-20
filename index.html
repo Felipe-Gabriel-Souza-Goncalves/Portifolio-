@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu portifólio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <a href="#feitos">Tecnologias</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#contatos">Contatos</a>    
+  </header>
+  <main>
+    <div id="aboutMe">
+      <div id="containerMe">
+        <img src="img/icons/fotoPerfil.png" alt="Foto de perfil" id="fotoPerfil">
+
+        <div id="description">
+          <h1>Hello world! Sou Felipe Gabriel</h1>
+          <p>Desenvolvedor Full-stack</p>
+          <p>
+            Estudo programação desde 2024, onde comecei no curso técnico de Desenvolvimento de Sistemas do SENAI.
+            Amo estudar diversos conteúdos, tais como tecnologia, idiomas ou música! :&rpar;
+          </p>
+        </div>
+  
+      </div>
+
+
+      <div id="feitos">
+        <!-- Courses Technologies -->
+        <div id="cursos">
+          <h2>Cursos</h2>
+          <div>
+            <p>Técnico em Desenvolvimento de sistemas</p>
+            <p>Desenvolvimento em JavaScript</p>
+          </div>
+        </div>
+        
+        <!-- Front-End Technologies -->
+        <div id="techFront">
+          <h2>Tecnologias Front-End</h2>
+          <div class="containerImagens">
+            <img src="img/technologies/html.svg" alt="HTML">
+            <img src="img/technologies/css.svg" alt="CSS">
+            <img src="img/technologies/javascript.png" alt="JavaScript">
+            <img src="img/technologies/react.svg" alt="React">
+            <img src="img/technologies/dart.svg" alt="Dart">
+            <img src="img/technologies/flutter.svg" alt="Flutter">
+          </div>
+        </div>
+
+        <!-- Back-End Technologies -->
+        <div id="techBack">
+          <h2>Tecnologias Back-End</h2>
+          <div class="containerImagens">
+            <img src="img/technologies/java.svg" alt="Java">
+            <img src="img/technologies/python.png" alt="Python">
+            <img src="img/technologies/javascript.png" alt="JavaScript">
+            <img src="img/technologies/node.png" alt="Node.js">
+            <img src="img/technologies/php.png" alt="PHP">
+          </div>
+        </div>
+
+        <!-- Outras Tecnologias -->
+        <div id="techOther">
+          <h2>Outras Tecnologias</h2>
+          <div class="containerImagens">
+            <img src="img/technologies/mysql.svg" alt="MySQL">
+            <img src="img/technologies/vscode.svg" alt="VSCode">
+            <img src="img/technologies/figma.png" alt="Figma">
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div style="display:flex;">
+      <img onclick="dropdownFeito()" id="dropdown" src="img/icons/setaDireita.svg" width="30" alt="dropdown">
+      <div id="linha"></div>
+    </div>
+
+    <div id="projetos">
+      <div id="projetosEducacionais">
+        <h2>Projetos educacionais -&nbsp;<a target="_blank" href="https://github.com/FelipeGSG">FelipeGSG</a></h2>
+        <hr>
+        <div style="display:flex;">
+          
+          <!-- Voltar carrossel -->
+          <div id="voltarEducacional">
+            &langle;
+          </div>
+          
+          <!-- Carrosel pessoal -->
+          <div id="carrosselEducacional">
+            <div class="projectDescriptionDiv">
+              <h2 id="nomeProjetoPessoal">...</h2>
+              <hr>
+              <p id="projetoPessoal">...</p>
+              <a target="_blank" id="linkProjetoPessoal" href="">...</a>
+            </div>
+          </div>         
+
+          <!-- Avançar carrossel -->
+          <div id="avancarEducacional">
+            &rangle;
+          </div>
+          
+        </div>
+
+      </div>
+      <div id="projetosPessoais">
+        <h2>Projetos pessoais -&nbsp;<a target="_blank" href="https://github.com/Felipe-Gabriel-Souza-Goncalves">Felipe Gabriel</a></h2>
+        <hr>
+
+        <div style="display:flex;width: 100%;">
+
+          <!-- Voltar carrossel -->
+          <div id="voltarPessoal">
+            &langle;
+          </div>
+
+          <!-- Carrosel pessoal -->
+          <div id="carrosselPessoal">
+            <div class="projectDescriptionDiv">
+              <h2 id="nomeProjetoPessoal">...</h2>
+              <hr>
+              <p id="projetoPessoal">...</p>
+              <a target="_blank" id="linkProjetoPessoal" href="">...</a>
+            </div>
+          </div>
+          
+          <!-- Avançar carrossel -->
+          <div id="avancarPessoal">
+            &rangle;
+          </div>
+
+        </div>
+        
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div id="contatos">
+      <a target="_blank" href="https://github.com/FelipeGSG"><img width="30" src="img/icons/github.svg" alt="github"> Educacional</a>
+      <a target="_blank" href="https://github.com/Felipe-Gabriel-Souza-Goncalves"><img width="30" src="img/icons/github.svg" alt="github"> Pessoal</a>
+      <a target="_blank" href="https://www.linkedin.com/in/felipe-gabriel-souza-gon%C3%A7alves-b78779358/?trk=public-profile-join-page"><img width="30" src="img/icons/linkedIn.png" alt="linkedin"></a>
+    </div>
+  </footer>
+
+  <!-- Links to script files -->
+  <script defer src="script/script.js"></script>
+</body>
+</html>

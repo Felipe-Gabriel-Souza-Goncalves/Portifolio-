@@ -1,0 +1,256 @@
+
+
+:root{
+  scroll-behavior: smooth;
+}
+body{
+  font-family: "National Park";
+  margin: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  color: white;
+  background-color: rgb(29, 19, 56);
+}
+header{
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  display: flex;
+  background-color: rgb(14, 4, 35);
+  border-bottom: 1px solid lightgray;
+  justify-content: space-evenly;
+  padding: 20px;
+  box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 0.444);
+}
+header a{
+  color: white;
+  text-decoration: none;
+}
+header a::after,
+#contatos a::after{
+  position: relative;
+  display: block;
+  content: "";
+  top: 0%;
+  left: -2%;
+  height: 2px;
+  width: 0%;
+  background-color: white;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+header a:hover:after,
+#contatos a:hover:after{
+  width: 105%;
+}
+main{
+  margin: 80px 200px 0px;
+}
+#containerMe{
+  display: flex;
+  gap: 20px;
+  border-bottom: 1px solid gray;
+  padding: 4px;
+}
+#fotoPerfil{
+  height: 220px;
+  max-width: 100%;
+  margin: 0 auto;
+  clip-path: circle();
+}
+#feitos{
+  display: flex;
+  gap: 20px 40px;
+  flex-wrap: wrap;
+  height: 230px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+#feitos div:not(#feitos div div){
+  margin: 0 auto;
+  max-width: 33%;
+  min-width: 200px;
+}
+#feitos *{
+  text-align: center;
+}
+#feitos h2{
+  text-align: center;
+}
+#projetos h2{
+  flex-wrap: wrap;
+  display: flex;
+}
+#projetos a{
+  word-break: break-all;
+  color: rgb(255, 176, 176);
+  transition: .3s;
+}
+#projetos a:hover{
+  color: rgb(255, 105, 105);
+}
+
+.containerImagens img{
+  height: 30px;
+}
+
+#dropdown{
+  width: 50px;
+  transition: .3s;
+}
+#dropdown:hover{
+  filter: brightness(2);
+  scale: 1.5;
+}
+#linha{
+  align-self: center;
+  width: 100%;
+  height: 2px;
+  background-color: gray;
+}
+
+#carrosselPessoal,
+#carrosselEducacional{
+  width: 100%;
+  min-height: calc(100vw / 2.7);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  border: 1px solid white;
+  border-radius: 15px;
+  animation: projetos 20s infinite;
+  transition: .3s;
+}
+
+#voltarEducacional, #avancarEducacional,
+#voltarPessoal, #avancarPessoal{
+  position: relative;
+  margin-top: 25%;
+  height: fit-content;
+  font-size: 2em;
+  font-weight: 900;
+  align-content: center;
+  transition: .3s;
+  user-select: none;
+}
+#voltarEducacional:hover, #avancarEducacional:hover,
+#voltarPessoal:hover, #avancarPessoal:hover{
+  scale: 1.5;
+}
+#voltarEducacional:active, #avancarEducacional:active,
+#voltarPessoal:active, #avancarPessoal:active{
+  scale: 1.2;
+  color: rgb(235, 235, 235);
+}
+#voltarEducacional, #voltarPessoal{
+  right: 35px;
+}
+#avancarEducacional, #avancarPessoal{
+  left: 35px;
+}
+
+#carrosselPessoal img,
+#carrosselEducacional img{
+  width: 50%;
+}
+#carrosselPessoal div,
+#carrosselEducacional div{
+  font-size: 1.5em;
+  backdrop-filter: blur(3px);
+  border-radius: 15px;
+  opacity: 0;
+  transition: 0.3s;
+  width: 50%;
+  padding: 15px;
+  padding-left: 50%;
+  margin-left: auto;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.623),  rgba(0, 0, 0, 0.89),  rgba(0, 0, 0, 0.89));
+}
+#carrosselPessoal:hover div,
+#carrosselEducacional:hover div{
+  opacity: 1;
+}
+
+footer{
+  margin-top: 20px;
+  padding: 30px;
+  width: 100%;
+  background-color: rgb(14, 4, 35);
+  border-top: 1px solid lightgray;
+}
+#contatos{
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#contatos a{
+  color: white;
+  gap: 5px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  header, footer{
+    box-sizing: border-box;
+    padding: 10px 3px;
+  }
+
+  main{
+    margin: 80px 30px 0px;
+  }
+  #containerMe{
+    flex-direction: column;
+  }
+  #projetos{
+    width: 100%;
+  }
+  #voltarEducacional, #voltarPessoal{
+    top: 110%;
+    right: 10px;
+  }
+  #avancarEducacional, #avancarPessoal{
+    top: 110%;
+    left: 10px;
+  }
+  
+  #carrosselPessoal div,
+  #carrosselEducacional div{
+    font-size: 1em;
+    width: 75%;
+    padding-left: 25%;
+  }
+  #contatos{
+    width: 100%;
+  }
+}
+
+@keyframes projetos {
+  0%{
+    opacity: 0;
+  }
+  5%{
+    transform: translateX(500px);
+    opacity: 0;
+  }
+  10%{
+    background-position: 0% 50%;
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  90%{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  100%{
+    background-position: 100% 50%;
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+
+}
